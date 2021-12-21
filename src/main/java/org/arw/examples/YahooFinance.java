@@ -8,6 +8,7 @@ import java.net.URL;
 public class YahooFinance {
     public static final BigDecimal getPrice(final String ticker) {
         try {
+            // Yahoo! ended this service 
             final URL url =
                 new URL("https://ichart.finance.yahoo.com/table.csv?s=" + ticker);
             
