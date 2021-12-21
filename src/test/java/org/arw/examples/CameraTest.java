@@ -22,7 +22,7 @@ public class CameraTest {
     void testSetSingleFilter() {
         Camera camera = new Camera();
 
-        camera.setFilters(Color::brighter);
+        camera.setColorFilters(Color::brighter);
         Color captured = camera.capture(new Color(200, 100, 200));
         assertEquals(-28929, captured.getRGB());
 
@@ -33,7 +33,7 @@ public class CameraTest {
     void testSetChainedFilters() {
         Camera camera = new Camera();
 
-        camera.setFilters(Color::brighter, Color::brighter);
+        camera.setColorFilters(Color::brighter, Color::brighter);
         Color captured = camera.capture(new Color(200, 100, 200));
         assertEquals(-13569, captured.getRGB());
 

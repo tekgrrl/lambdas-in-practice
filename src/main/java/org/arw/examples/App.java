@@ -17,13 +17,13 @@ public class App
             System.out.println(String.format("with %s: %s", filterInfo, 
               camera.capture(new Color(200, 100, 200))));
 
-              camera.setFilters((Color::brighter));
+              camera.setColorFilters((Color::brighter));
               printCaptured.accept("brighter filter");
 
-              camera.setFilters(Color::darker);
+              camera.setColorFilters(Color::darker);
               printCaptured.accept("darker filter");
 
-              camera.setFilters(Color::brighter, Color::brighter);
+              camera.setColorFilters(Color::brighter, Color::brighter);
               printCaptured.accept("brighter and darker filters");
     }
 }
